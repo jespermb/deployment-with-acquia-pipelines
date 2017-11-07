@@ -24,3 +24,10 @@ events:
             - npm run build
             - rm -fr node_modules
             - popd
+      - example_preact_app:
+          type: script
+          script:
+            - pushd docroot/modules/custom/example_preact/components/example_preact_app
+            - npm install
+            - npm run build
+            - popd

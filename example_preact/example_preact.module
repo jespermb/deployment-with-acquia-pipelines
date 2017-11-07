@@ -1,8 +1,5 @@
-## Deploy with acquia pipelines example.
+<?php
 
-Add this if when deploying a javascript component build during deployment.
-
-```
 /**
  * Implements hook_library_info_build().
  */
@@ -29,4 +26,3 @@ function example_preact_library_info_build() {
 
   return $libraries;
 }
-```
