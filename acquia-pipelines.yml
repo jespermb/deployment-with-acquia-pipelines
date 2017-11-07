@@ -1,0 +1,10 @@
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - composer:
+          type: script
+          script:
+            # Run composer install to setup the project and modules.
+            - composer install --no-progress
