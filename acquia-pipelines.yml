@@ -10,4 +10,17 @@ events:
           type: script
           script:
             # Run composer install to setup the project and modules.
-            - composer install --no-progress
+            - composer install --no-progress --no-interaction --no-dev
+      - node_v7.10:
+          type: script
+          script:
+            - nvm install v7.10
+            - nvm use 7.10
+      - example_theme:
+          type: script
+          script:
+            - pushd docroot/themes/custom/example_theme
+            - npm install
+            - npm run build
+            - rm -fr node_modules
+            - popd
